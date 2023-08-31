@@ -1,12 +1,14 @@
-const express = require('express')
-const app = express()
-const PORT = 3000
-const routes = require('./routes')
+require("dotenv").config();
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true}))
+const express = require("express");
+const app = express();
+const PORT = 3000;
+const routes = require("./routes");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // routes
-app.use(routes)
+app.use(routes);
 
-app.listen(PORT, () => console.log(`Listening at ${PORT}`))
+app.listen(PORT, () => console.log(`Listening at ${PORT}`));
