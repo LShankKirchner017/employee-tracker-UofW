@@ -50,7 +50,13 @@ const addEmployee = () => {
         },
         {
             name: 'last_name',
-            type: 'input'
+            type: 'input',
+            message: "Enter employee's last name"
+        },
+        {
+            name: 'role_id',
+            type: 'input',
+            message: 'What is the role ID for the employee?'
         }
 
     ])
