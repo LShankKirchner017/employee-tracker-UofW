@@ -9,7 +9,7 @@ const {
     addRole,
     existMenu
 
-} = require('./utils/userSelectionFunctions')
+} = require('./utils/userSelectionFunction')
 
 inquirer.prompt({
     type: 'list',
