@@ -19,13 +19,14 @@ const addDepartment = () => {
         message: 'Please name additional department'
         }
     ])
-    try {
-        let query = `INSERT INTO departments (name) VALUES (?)`
-        connection.query(query, [answer.name])
-        console.log('Department Successfully Added!')
-    } catch (err) {
-        console.error(err)
-    }
+    .then(function (answer) {
+        connection.query(`INSERT INTO departments (department_name) VALUES (?)`, [answer.name],
+        function (err, results, fields){
+            if (err) throw err
+            console.log("Department successfully added!")
+            exitMenu()
+        })
+    })
 }
 
 const viewAllEmployees = () => {
