@@ -7,7 +7,7 @@ const {
     updateEmployee,
     viewAllRoles,
     addRole,
-    existMenu
+    exitMenu
 
 } = require('./utils/userSelectionFunction')
 
@@ -51,7 +51,7 @@ inquirer.prompt({
         break;
     case "Exit the application":
         console.log('Thank you! Goodbye!')
-        existMenu()
+        exitMenu()
     }
 }) .catch((err) => {
     console.error(err)
